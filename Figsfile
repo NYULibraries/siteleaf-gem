@@ -1,0 +1,4 @@
+--- !ruby/object:Figs::Figsfile
+locations:
+- "siteleaf_secret.yml"
+method: path

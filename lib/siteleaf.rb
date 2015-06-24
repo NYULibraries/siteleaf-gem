@@ -13,6 +13,8 @@ require 'siteleaf/site'
 require 'siteleaf/theme'
 require 'siteleaf/user'
 require 'rbconfig'
+require 'figs'
+Figs.load
 
 module Siteleaf
 
@@ -31,7 +33,10 @@ module Siteleaf
   end
 
   def self.load_settings
-    if File.exist?(self.settings_file)
+    if !ENV['API_KEY'].nil? && !ENV['API_SECRET'].nil?
+      self.api_key    = ENV['SITELEAF_KEY']
+      self.api_secret = ENV['SITELEAF_SECRET']
+    elsif File.exist?(self.settings_file)
       config = File.open(self.settings_file) do|file|
         Marshal.load(file)
       end
