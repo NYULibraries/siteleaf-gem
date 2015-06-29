@@ -3,10 +3,6 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in siteleaf.gemspec
 gemspec
 
-# Use formaggio for (NYU) flavored figs
-gem 'formaggio', github: 'NYULibraries/formaggio'
-
-
 # Rubocop to standardize ruby usage
 gem 'rubocop', require: false
 
