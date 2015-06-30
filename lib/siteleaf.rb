@@ -13,6 +13,7 @@ require 'siteleaf/site'
 require 'siteleaf/theme'
 require 'siteleaf/user'
 require 'rbconfig'
+require 'figs'
 
 # Loads up key and secret from the environment variables using figs otherwise it reads from the settings file
 module Siteleaf
@@ -35,7 +36,15 @@ module Siteleaf
     self.api_secret = secret
   end
 
+  def self.load_env_vars
+    return false unless File.exist?('./Figsfile')
+    Figs.load
+    load_key_secret(ENV['API_KEY'], ENV['API_SECRET'])
+    true
+  end
+
   def self.load_settings
+    return if load_env_vars
     return unless File.exist?(settings_file)
     config = Marshal.load(File.open(settings_file))
     load_key_secret(config[:api_key], config[:api_secret]) if config.key?(:api_key) && config.key?(:api_secret)
