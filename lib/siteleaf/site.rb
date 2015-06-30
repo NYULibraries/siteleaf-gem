@@ -18,19 +18,16 @@ module Siteleaf
     end
 
     def assets
-      # result = Client.get "sites/#{id}/assets"
       result = fetch_site_items('asset')
       result.map { |asset| Asset.new(asset) } if result
     end
 
     def pages
-      # result = Client.get "sites/#{id}/pages"
       result = fetch_site_items('pages')
       result.map { |page| Page.new(page) } if result
     end
 
     def posts
-      # result = Client.get "sites/#{id}/posts"
       result = fetch_site_items('posts')
       result.map { |post| Post.new(post) } if result
     end

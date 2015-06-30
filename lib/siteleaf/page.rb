@@ -13,19 +13,16 @@ module Siteleaf
     end
 
     def assets
-      # result = Client.get "pages/#{id}/assets"
       result = fetch_page_items('/assets')
       result.map { |asset| Asset.new(asset) } if result
     end
 
     def posts
-      # result = Client.get "pages/#{id}/posts"
       result = fetch_page_items('/posts')
       result.map { |post| Post.new(post) } if result
     end
 
     def pages
-      # result = Client.get "pages/#{id}?include=pages"
       result = fetch_page_items('?include=pages')
       result['pages'].map { |page| Page.new(page) } if result
     end

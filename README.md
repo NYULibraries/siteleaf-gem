@@ -1,6 +1,9 @@
 Siteleaf Gem
 ============
 
+[![Code Climate](https://codeclimate.com/github/NYULibraries/siteleaf-gem/badges/gpa.svg)](https://codeclimate.com/github/NYULibraries/siteleaf-gem)
+[![Test Coverage](https://codeclimate.com/github/NYULibraries/siteleaf-gem/badges/coverage.svg)](https://codeclimate.com/github/NYULibraries/siteleaf-gem/coverage)
+
 - [Installation](#installation)
 - [Testing sites locally](#testing-sites-locally)
 - [Using this gem in your application](#using-this-gem-in-your-application)
@@ -71,7 +74,7 @@ To publish your site changes to your hosting provider, run the following command
 
 **Switch Siteleaf users or re-authenticate:**
 
-    siteleaf auth email:password
+    siteleaf auth
 
 **For a full list of commands, run:**
 
