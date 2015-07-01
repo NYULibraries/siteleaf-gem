@@ -11,14 +11,13 @@ module Siteleaf
 
     def theme
       result = Client.get("sites/#{id}/theme")
-      # fail Error, 'No Theme found' if result.nil?
       theme = Theme.new(result)
       theme.site_id = id
       theme
     end
 
     def assets
-      result = fetch_site_items('asset')
+      result = fetch_site_items('assets')
       result.map { |asset| Asset.new(asset) } if result
     end
 

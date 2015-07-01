@@ -32,6 +32,7 @@ module Siteleaf
   end
 
   def self.load_key_secret(key, secret)
+    fail ArgumentError, 'Key and Secret are both required parameters' if key.empty? || secret.empty?
     self.api_key    = key
     self.api_secret = secret
   end
