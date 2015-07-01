@@ -1,8 +1,13 @@
 Siteleaf Gem
 ============
 
+[![NYU](https://github.com/NYULibraries/nyulibraries-assets/blob/master/lib/assets/images/nyu.png)](https://dev.library.nyu.edu)
+[![Siteleaf](https://futureofwebdesign.com/new-york-2010/images/content/logo_siteleaf_new.png)](http://siteleaf.com/)
+[![Build Status](https://travis-ci.org/NYULibraries/siteleaf-gem.svg)](https://travis-ci.org/NYULibraries/siteleaf-gem)
+[![Dependency Status](https://gemnasium.com/NYULibraries/siteleaf-gem.svg)](https://gemnasium.com/NYULibraries/siteleaf-gem)
 [![Code Climate](https://codeclimate.com/github/NYULibraries/siteleaf-gem/badges/gpa.svg)](https://codeclimate.com/github/NYULibraries/siteleaf-gem)
 [![Test Coverage](https://codeclimate.com/github/NYULibraries/siteleaf-gem/badges/coverage.svg)](https://codeclimate.com/github/NYULibraries/siteleaf-gem/coverage)
+[![Issues](http://img.shields.io/github/issues/NYULibraries/lsiteleaf-gem.svg?style=flat-square)](http://github.com/NYULibraries/siteleaf-gem/issues)
 
 - [Installation](#installation)
 - [Testing sites locally](#testing-sites-locally)
